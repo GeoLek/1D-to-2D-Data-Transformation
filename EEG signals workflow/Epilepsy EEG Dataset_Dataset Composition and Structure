@@ -1,0 +1,23 @@
+Dataset Composition and Structure
+
+The dataset is divided into five distinct sets (A through E), with each set containing EEG data recorded under different conditions.
+Each set consists of 100 single-channel EEG recordings, each lasting 23.6 seconds and sampled at 173.61 Hz (rounded to 174 Hz in many analyses).
+The five sets can be categorized as follows:
+Set A (Z): Contains recordings labeled "Z", which are EEG signals recorded from healthy subjects with eyes open. This state represents a normal and awake brain activity.
+Set B (O): Contains recordings labeled "O", representing EEG signals from healthy subjects with eyes closed. The difference between eyes open and closed can affect brain wave activity, particularly in the alpha band.
+Set C (N): Contains recordings labeled "N", representing interictal (non-seizure) EEG signals recorded from the epileptic zone in the brain of individuals with epilepsy. These are considered abnormal but not seizure-related.
+Set D (F): Contains recordings labeled "F", which are interictal EEG signals from regions outside the epileptic zone. Although recorded from an epileptic patient, these signals are from non-epileptic regions.
+Set E (S): Contains recordings labeled "S", representing ictal (seizure) EEG signals. These signals are recorded during actual seizure events and are strongly abnormal.
+
+Contents of Each Folder:
+
+Each folder contains 100 .txt files, where each file represents an individual EEG recording.
+
+Each .txt file contains 4097 samples of EEG data.
+These files store raw EEG signal data (one-dimensional) for a specific period.
+
+In summary:
+
+Set A (Z) and Set B (O) contain normal EEG signals (healthy individuals).
+Set C (N) and Set D (F) contain abnormal signals from epileptic patients (non-seizure state).
+Set E (S) contains seizure (ictal) EEG signals.
