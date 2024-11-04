@@ -21,3 +21,10 @@ In summary:
 Set A (Z) and Set B (O) contain normal EEG signals (healthy individuals).
 Set C (N) and Set D (F) contain abnormal signals from epileptic patients (non-seizure state).
 Set E (S) contains seizure (ictal) EEG signals.
+
+Our analysis:
+1) Script: EEG Preprocessing 1.py. The Epilepsy EEG Dataset is relatively already cleaned. We implemented basic preprocessing steps like Filtering, Baseline Removal, and Normalization in order to make the signal more uniform, remove artifacts and normalize it to keep it consistent.
+2) Applied 6 dimension transformation methods
+3) Data augmentation to reach 10000 images
+4) Dataset split to 7000 train,1500 test and 1500 validation
+5) Minimal 2D CNN and LeNet-5 training and evaluation
