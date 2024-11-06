@@ -1,3 +1,5 @@
+# Simple 1D to 2D visualization
+
 import os
 import numpy as np
 import matplotlib.pyplot as plt
