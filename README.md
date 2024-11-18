@@ -1,5 +1,4 @@
-# Transforming-1-D-Machine-Learning-Problems-to-2-D-Towards-Using-Convolutional-Neural-Networks 
-This is an endeavour to transform 1D Machine Learning problems to 2D towards using Convolutional Neural Networks. We will check various dimension transformation methods and evaluate their performance. 
+# 1D to 2D Data Transformation
 
 # Used datasets
 For ECG signals we will use the MIT-BIH Arrhythmia Dataset from PhysioNet (Version: 1.0.0). Find them [here](https://physionet.org/content/mitdb/1.0.0/)  
