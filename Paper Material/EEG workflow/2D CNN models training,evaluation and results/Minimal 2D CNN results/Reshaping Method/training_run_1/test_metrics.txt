@@ -1,0 +1,56 @@
+Overall Evaluation Metrics:
+Accuracy: 0.7717
+Precision: 0.7769
+Recall: 0.7717
+F1 Score: 0.7727
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+           Z       0.76      0.71      0.73      1500
+           O       0.67      0.76      0.71      1500
+           N       0.77      0.83      0.80      1500
+           F       0.83      0.79      0.81      1500
+           S       0.86      0.77      0.81      1500
+
+    accuracy                           0.77      7500
+   macro avg       0.78      0.77      0.77      7500
+weighted avg       0.78      0.77      0.77      7500
+
+Confusion Matrix (with TP, FP, FN, TN values):
+[[1060  200  101   74   65]
+ [ 104 1146  108   72   70]
+ [  86  111 1242   51   10]
+ [  50  150   75 1186   39]
+ [  95  104   94   53 1154]]
+
+Z:
+  TP: 1060
+  FP: 335
+  FN: 440
+  TN: 5665
+
+O:
+  TP: 1146
+  FP: 565
+  FN: 354
+  TN: 5435
+
+N:
+  TP: 1242
+  FP: 378
+  FN: 258
+  TN: 5622
+
+F:
+  TP: 1186
+  FP: 250
+  FN: 314
+  TN: 5750
+
+S:
+  TP: 1154
+  FP: 184
+  FN: 346
+  TN: 5816
+
