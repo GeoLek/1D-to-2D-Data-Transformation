@@ -1,0 +1,83 @@
+Classification Report:
+              precision    recall  f1-score   support
+
+           N       0.95      0.96      0.96     15000
+           S       0.96      0.96      0.96     15000
+           V       0.99      1.00      1.00     15000
+           F       1.00      1.00      1.00     15000
+           Q       0.96      0.94      0.95     15000
+
+    accuracy                           0.97     75000
+   macro avg       0.97      0.97      0.97     75000
+weighted avg       0.97      0.97      0.97     75000
+
+Confusion Matrix:
+[[14452   308    22     1   217]
+ [  260 14406    39     6   289]
+ [    0     1 14981     0    18]
+ [    0     0     0 15000     0]
+ [  486   329    51     1 14133]]
+
+Accuracy: 0.97296
+Precision: 0.9729602233658476
+Recall: 0.97296
+F1 Score: 0.9729240530999789
+
+Detailed Report:
+N:
+  precision: 0.9509145940255297
+  recall: 0.9634666666666667
+  f1-score: 0.9571494800980197
+  support: 15000.0
+  TP: 14452
+  FP: 746
+  FN: 548
+  TN: 59254
+S:
+  precision: 0.9575910662057964
+  recall: 0.9604
+  f1-score: 0.9589934762348555
+  support: 15000.0
+  TP: 14406
+  FP: 638
+  FN: 594
+  TN: 59362
+V:
+  precision: 0.9925793414165507
+  recall: 0.9987333333333334
+  f1-score: 0.9956468281660187
+  support: 15000.0
+  TP: 14981
+  FP: 112
+  FN: 19
+  TN: 59888
+F:
+  precision: 0.9994669509594882
+  recall: 1.0
+  f1-score: 0.9997334044254865
+  support: 15000.0
+  TP: 15000
+  FP: 8
+  FN: 0
+  TN: 59992
+Q:
+  precision: 0.9642491642218735
+  recall: 0.9422
+  f1-score: 0.9530970765755133
+  support: 15000.0
+  TP: 14133
+  FP: 524
+  FN: 867
+  TN: 59476
+accuracy:
+  value: 0.97296
+macro avg:
+  precision: 0.9729602233658475
+  recall: 0.9729599999999999
+  f1-score: 0.9729240530999788
+  support: 75000.0
+weighted avg:
+  precision: 0.9729602233658476
+  recall: 0.97296
+  f1-score: 0.9729240530999789
+  support: 75000.0
