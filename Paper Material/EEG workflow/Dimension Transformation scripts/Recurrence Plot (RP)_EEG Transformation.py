@@ -61,4 +61,4 @@ for set_name, letter in zip(sets, letters):
             record_name = os.path.splitext(filename)[0]  # e.g., 'processed_Z001'
             create_and_save_rp_images(set_name, record_name, input_file, output_dir)
 
-print("CWT transformation and image saving complete.")
+print("RP transformation and image saving complete.")
