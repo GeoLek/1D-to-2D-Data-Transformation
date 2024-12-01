@@ -20,8 +20,8 @@ else:
 # Define paths
 base_dir = '/home/orion/Geo/Projects/Transforming-1-D-Machine-Learning-Problems-to-2-D-Towards-Using-Convolutional-Neural-Networks/Data/Fast Fourier Transform (FFT)'
 test_dir = os.path.join(base_dir, 'test')
-model_path = '/home/orion/Geo/Projects/Transforming-1-D-Machine-Learning-Problems-to-2-D-Towards-Using-Convolutional-Neural-Networks/Models results/Minimal 2D CNN/Fast Fourier Transform (FFT)/training_run_1/final_model.h5'
-output_file_path = '/home/orion/Geo/Projects/Transforming-1-D-Machine-Learning-Problems-to-2-D-Towards-Using-Convolutional-Neural-Networks/Models results/Minimal 2D CNN/Fast Fourier Transform (FFT)/training_run_1/test_metrics.txt'
+model_path = '/home/orion/Geo/Projects/1D-to-2D-Data-Transformation/Output_updated/ECG/Minimal-Recurrence Plots/training_run_1/final_model.h5'
+output_file_path = '/home/orion/Geo/Projects/1D-to-2D-Data-Transformation/Output_updated/ECG/Minimal-Recurrence Plots/training_run_1/test_metrics.txt'
 confusion_matrix_path = os.path.join(os.path.dirname(output_file_path), 'confusion_matrix.png')
 
 # Ensure the output directory exists
@@ -38,7 +38,7 @@ test_generator = test_datagen.flow_from_directory(
     directory=test_dir,
     target_size=(224, 224),
     color_mode='grayscale',
-    batch_size=16,
+    batch_size=8,
     class_mode='categorical',
     shuffle=False
 )
