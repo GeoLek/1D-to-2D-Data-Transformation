@@ -40,14 +40,14 @@ validation_datagen = ImageDataGenerator(rescale=1./255)
 train_generator = train_datagen.flow_from_directory(directory=train_dir,
                                                     target_size=(224, 224),
                                                     color_mode='grayscale',
-                                                    batch_size=16,
+                                                    batch_size=8,
                                                     class_mode='categorical',
                                                     shuffle=True)
 
 validation_generator = validation_datagen.flow_from_directory(directory=validation_dir,
                                                               target_size=(224, 224),
                                                               color_mode='grayscale',
-                                                              batch_size=16,
+                                                              batch_size=8,
                                                               class_mode='categorical',
                                                               shuffle=False)
 
@@ -65,7 +65,7 @@ model = Sequential([
 ])
 
 # Compile the model
-model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=Adam(learning_rate=0.00001), loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Print model summary
 model.summary()
@@ -73,15 +73,22 @@ model.summary()
 # Define early stopping
 early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3, verbose=1, restore_best_weights=True)
 
-# Model Training
-history = model.fit(train_generator,
-                    epochs=10,
-                    validation_data=validation_generator,
-                    callbacks=[
-                        tf.keras.callbacks.ModelCheckpoint(model_checkpoint_path, monitor='val_accuracy', save_best_only=True, verbose=1),
-                        tf.keras.callbacks.CSVLogger(training_history_path),
-                        early_stopping_callback
-                    ])
+# Model Training with 'val_loss' as monitored metric for both early stopping and checkpoint
+history = model.fit(
+    train_generator,
+    epochs=20,
+    validation_data=validation_generator,
+    callbacks=[
+        tf.keras.callbacks.ModelCheckpoint(
+            model_checkpoint_path,
+            monitor='val_loss',  # Change to 'val_loss' for checkpoint saving
+            save_best_only=True,
+            verbose=1
+        ),
+        tf.keras.callbacks.CSVLogger(training_history_path),
+        early_stopping_callback
+    ]
+)
 
 # Save the trained model
 model.save(os.path.join(output_dir, 'final_model.h5'))
