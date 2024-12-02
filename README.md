@@ -8,7 +8,6 @@ In this initiative we investigated the effectiveness of six different 1D-to-2D t
 For ECG signals we used the MIT-BIH Arrhythmia Dataset from PhysioNet (Version: 1.0.0). Find it [here](https://physionet.org/content/mitdb/1.0.0/)  
 For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [here](https://www.ukbonn.de/epileptologie/arbeitsgruppen/ag-lehnertz-neurophysik/downloads/)
 
-# Results
 # Results of 1D-to-2D Transformations for ECG and EEG Signals
 
 ### Classification Results for ECG Signals
