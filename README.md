@@ -10,7 +10,8 @@ For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [
 
 # Preprocessing steps
 a) ECG signals | b) EEG signals
-![image](https://github.com/user-attachments/assets/2ea45bca-5ca9-42a3-af2a-5d348b2cb93e)
+
+![Screenshot 2024-12-04 00:12:31](https://github.com/user-attachments/assets/a8006789-6c40-4e98-93bf-669a15934e75)
 
 
 # Results of 1D-to-2D Transformations for ECG and EEG Signals
