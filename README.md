@@ -12,6 +12,13 @@ For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [
 
 ![Screenshot 2024-12-04 00:12:31](https://github.com/user-attachments/assets/251173f3-4def-440b-b4ee-a6f25d9b7b37)
 
+# 1D Signals (simple visualizations): ECG & EEG Signals
+
+![Screenshot 2024-12-05 18:16:54](https://github.com/user-attachments/assets/1e650fdf-09f4-48f7-9042-e5e321f0a047)
+
+# 2D Recurrence Plots transformed Images: ECG & EEG Signals
+
+![Screenshot 2024-12-05 18:17:26](https://github.com/user-attachments/assets/b9b14068-d461-473b-98f4-d538f4fdc8a8)
 
 # Results of 1D-to-2D Transformations for ECG and EEG Signals
 
