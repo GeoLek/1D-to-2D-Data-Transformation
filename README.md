@@ -20,6 +20,10 @@ For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [
 
 ![Screenshot 2024-12-05 18:17:26](https://github.com/user-attachments/assets/b9b14068-d461-473b-98f4-d538f4fdc8a8)
 
+# Post-processing steps for ECG & EEG signals before CNNs training
+
+![image](https://github.com/user-attachments/assets/52e6b332-f286-4558-881f-9fb2ba2288a9)
+
 # Results of 1D-to-2D Transformations for ECG and EEG Signals
 
 ### Classification Results for ECG Signals
