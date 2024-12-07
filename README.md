@@ -24,7 +24,7 @@ For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [
 
 ![image](https://github.com/user-attachments/assets/52e6b332-f286-4558-881f-9fb2ba2288a9)
 
-# Results of 1D-to-2D Transformations for ECG and EEG Signals
+# Results of 1D-to-2D Transformations for ECG & EEG Signals
 
 ### Classification Results for ECG Signals
 | Dimension Transformation Method | Accuracy | F1-Score | Recall | Precision |
