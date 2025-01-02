@@ -2,6 +2,8 @@
 
 The repository for the published paper 'Time-Frequency Transformations for Enhanced Biomedical Signal Classification with CNNs'
 
+Under review in MDPI BioMedInformatics journal
+
 In this initiative we investigated the effectiveness of six different 1D-to-2D transformation methods: Continuous Wavelet Transform (CWT), Discrete Fourier Transform (DFT), Fast Fourier Transform (FFT), Short-Time Fourier Transform (STFT), Signal Reshaping (SR), and Recurrence Plots (RPs) to classify electrocardiograms (ECGs) & electroencephalograms (EEGs) signals.
 
 # Datasets
