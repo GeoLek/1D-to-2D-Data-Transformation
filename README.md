@@ -14,7 +14,7 @@ For EEG signals we used the Epilepsy EEG Dataset (University of Bonn). Find it [
 
 ![Screenshot 2024-12-04 00:12:31](https://github.com/user-attachments/assets/251173f3-4def-440b-b4ee-a6f25d9b7b37)
 
-# 1D Signals (simple visualizations): ECG & EEG Signals
+# 1D Signals (simple visualizations for presentation): ECG & EEG Signals
 
 ![Screenshot 2024-12-05 18:16:54](https://github.com/user-attachments/assets/1e650fdf-09f4-48f7-9042-e5e321f0a047)
 
