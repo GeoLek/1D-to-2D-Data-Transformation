@@ -1,7 +1,4 @@
-The repository for the published paper 'Time–Frequency Transformations for Enhanced Biomedical Signal Classification with Convolutional Neural Networks'
-
-The paper was published in MDPI BioMedInformatics Journal and can be found [here](https://www.mdpi.com/2673-7426/5/1/7)
-
+The repository contains the code implementation used for the paper ['Time–Frequency Transformations for Enhanced Biomedical Signal Classification with Convolutional Neural Networks'](https://www.mdpi.com/2673-7426/5/1/7) published in [MDPI BioMedInformatics Journal](https://www.mdpi.com/journal/biomedinformatics).
 In this study we investigated the effectiveness of five different 1D-to-2D transformation methods: Continuous Wavelet Transform (CWT), Fast Fourier Transform (FFT), Short-Time Fourier Transform (STFT), Signal Reshaping (SR), and Recurrence Plots (RPs) to classify electrocardiograms (ECGs) & electroencephalograms (EEGs) signals.
 
 # Datasets
