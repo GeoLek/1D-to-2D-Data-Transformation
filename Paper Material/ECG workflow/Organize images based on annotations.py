@@ -1,63 +1,44 @@
 import os
 import shutil
 
-# Base directory containing folders like "record_100", "record_101", etc.
-data_dir = ''
-# Destination directory to organize images
-output_dir = os.path.join(data_dir, 'Organized')
+# Define directories
+main_dir = '/home/orion/Geo/To test 1d-to-2d/Paper Material/ECG workflow/Extracted_data_new/OUTPUTFFT/FFT'
+output_base_dir = '/home/orion/Geo/To test 1d-to-2d/Paper Material/ECG workflow/Extracted_data_new/OUTPUTFFT/FFT/ORG'
 
-# Ensure the output directory exists
-os.makedirs(output_dir, exist_ok=True)
+# Define the annotations
+annotations = ['N', 'S', 'V', 'F', 'Q']
 
-##############################################################################
-# Extended Annotation Mapping
-##############################################################################
-# Each final class (N, S, V, F, Q) corresponds to multiple symbol variations.
-annotation_equiv = {
-    'N': ['N', 'L', 'R', 'e', 'j'],
-    'S': ['A', 'a', 'J', 'S'],
-    'V': ['V', 'E'],
-    'F': ['F'],
-    'Q': ['/', 'f', 'Q']
-}
+# Ensure the output directories for each annotation exist
+for annotation in annotations:
+    os.makedirs(os.path.join(output_base_dir, annotation), exist_ok=True)
 
-# Create subfolders for each final class
-for final_class in annotation_equiv:
-    os.makedirs(os.path.join(output_dir, final_class), exist_ok=True)
+# Loop through each record folder
+for record_folder in os.listdir(main_dir):
+    record_path = os.path.join(main_dir, record_folder)
 
-# Iterate over subdirectories named "record_XXX" within data_dir
-for record_folder in sorted(os.listdir(data_dir)):
-    record_path = os.path.join(data_dir, record_folder)
+    # Check if it's a directory and matches the pattern for record folders
+    if os.path.isdir(record_path) and record_folder.startswith('record_'):
+        record_number = record_folder.split('_')[1]  # Extract the record number
 
-    # Skip non-directory items or the "Organized" folder
-    if not os.path.isdir(record_path) or record_folder == 'Organized':
-        continue
+        # Loop through each file in the record folder
+        for filename in os.listdir(record_path):
+            if filename.endswith('.png'):
+                # Extract the annotation symbol from the filename
+                parts = filename.split('_')
+                if len(parts) >= 4 and parts[2] == 'symbol':
+                    annotation_symbol = parts[3].split('.')[0]
 
-    # Process PNG files inside each record_XXX folder
-    for file_name in sorted(os.listdir(record_path)):
-        if file_name.endswith('.png'):
-            source_path = os.path.join(record_path, file_name)
+                    # Check if the annotation symbol is in the desired list
+                    if annotation_symbol in annotations:
+                        # Create a unique filename by including the record number
+                        unique_filename = f'record_{record_number}_{filename}'
 
-            # Split filename into base and extension to ensure strict matching
-            base_name, ext = os.path.splitext(file_name)
-            # We already know ext == '.png' from the check above
+                        # Define the source and destination file paths
+                        src_file = os.path.join(record_path, filename)
+                        dst_file = os.path.join(output_base_dir, annotation_symbol, unique_filename)
 
-            # Attempt to match the base name with each final_class symbol
-            copied = False
-            for final_class, symbol_list in annotation_equiv.items():
-                for symbol in symbol_list:
-                    # We check if the base_name ends exactly with "symbol_{symbol}"
-                    # Example: base_name might be "beat_3_symbol_N"
-                    # We require the suffix to be: "_symbol_N"
-                    suffix = f'symbol_{symbol}'
-                    if base_name.endswith(suffix):
-                        # Construct a new file name to avoid overwriting
-                        new_file_name = f'{record_folder}_{base_name}{ext}'
-                        dest_path = os.path.join(output_dir, final_class, new_file_name)
-                        shutil.copy(source_path, dest_path)
-                        copied = True
-                        break
-                if copied:
-                    break
+                        # Copy the file to the corresponding annotation directory
+                        shutil.copy(src_file, dst_file)
+                        print(f'Copied {src_file} to {dst_file}')  # Print statement for debugging
 
-print("Organized files into annotation folders successfully!")
+print("Organizing complete.")
